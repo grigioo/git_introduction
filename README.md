@@ -219,8 +219,9 @@ Modified - состояние, когда git следит за файлом, в
 flowchart TD;
 	A[Untracked] -- git add --> B{Staged};
 	B -- change --> C[Modified];
-	B -- commit --> C[Tracked];
-	C -- change --> A; 
+	B -- commit --> D[Tracked];
+	C -- git add --> B;
+	D -- change --> C; 
 ```
 
 
