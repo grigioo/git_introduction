@@ -220,7 +220,7 @@ flowchart TD;
 	A[Untracked] -- git add --> B{Staged};
 	B -- change --> C[Modified];
 	B -- commit --> C[Tracked];
-	C -- change --> B; 
+	C -- change --> A; 
 ```
 
 
