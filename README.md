@@ -216,8 +216,11 @@ Modified - состояние, когда git следит за файлом, в
 ### Схематическое изображение состояний файла
 
 ```mermaid
-graph TD;
-	A[Unstracked] --> B[Staged]
+flowchart TD;
+	A[Untracked] -- git add --> B{Staged};
+	B -- change --> C[Modified];
+	B -- commit --> C[Tracked];
+	C -- change --> B; 
 ```
 
 
